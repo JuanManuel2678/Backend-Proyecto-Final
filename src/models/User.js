@@ -56,6 +56,11 @@ class User {
       const [usuario] = await pool.execute('SELECT * FROM users WHERE email = ?', [email])
       return usuario
     }
+
+    static async userDelete (id) {
+      const [deleteUser] = await pool.execute('DELETE FROM users WHERE id = ?', [id])
+      return deleteUser
+    }
 }
 
 export default User
