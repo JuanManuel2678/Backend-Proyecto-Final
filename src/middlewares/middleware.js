@@ -1,7 +1,7 @@
 
 
 export const validateCORS = (req, res, next) => {
-    const validOrigins = ['http://localhost:5173']
+    const validOrigins = ['http://localhost:5175']
     const { origin } = req.headers
   
     if (validOrigins.includes(origin) || !origin) {
